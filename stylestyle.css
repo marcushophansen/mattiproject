@@ -94,3 +94,27 @@ iframe{
     }
     
 }
+
+
+@media screen and (min-width: 630px) and (max-width: 834px) {
+    .menuBtn{
+        top: 2%;
+        right: 10%;
+    }
+
+    iframe{
+        width: 650px;
+        height: 400px;
+    }
+    .main-content{
+        margin-left: auto;
+        margin-right: auto;
+        width: 650px;
+    }
+    h1{
+        font-size: 1.6em;
+    }
+    h2{
+        font-size: 1em;
+    }
+}
