@@ -53,8 +53,9 @@ a ,.innholdA{
 /*Video-box*/
 
 iframe{
+    
     width: 1000px;
-    height: 563px;
+    height: 567px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +68,10 @@ iframe{
     width: 1000px;
 }
 
-@media screen and (max-width:620px) {
+
+
+
+@media screen and (max-width:630px) {
     .menuBtn{
         top: 2%;
         right: 10%;
@@ -90,28 +94,3 @@ iframe{
     }
     
 }
-@media screen and (max-width:830px) {
-    .menuBtn{
-        top: 2%;
-        right: 10%;
-    }
-
-    iframe{
-        width: 720px;
-        height: 500px;
-    }
-    .main-content{
-        margin-left: auto;
-        margin-right: auto;
-        width: 360px;
-    }
-    h1{
-        font-size: 1.6em;
-    }
-    h2{
-        font-size: 1em;
-    }
-    
-}
-
-
