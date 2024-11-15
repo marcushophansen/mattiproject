@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylestyle.css">
     <title>Document</title>
+    <link rel="stylesheet" href="stylestyle.css">
 </head>
 <body>
-
-
     <header>
         <!--OslometLogo hentet direkte fra oslomet sin side
         https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap
@@ -17,7 +15,7 @@
     <svg class="oslometLogo" role="img" aria-label="OsloMet - Forside" width="80px" height="46px" viewBox="0 0 60 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <title>OsloMet - Forside</title>
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-            <g id="logo-color" transform="translate(-23.000000, -22.000000)" fill="#222222">
+            <g id="logo-color" transform="translate(-23.000000, -22.000000)" fill="#FFFFFF">
                 <g transform="translate(23.000000, 22.000000)">
                     <polygon id="Fill-11" points="57.8624118 30.8473235 56.0465294 29.0314412 49.5541765 35.5237941 47.703 33.6717353 54.1953529 27.1802647 52.3785882 25.3635 54.0894706 23.6526176 59.5732941 29.1364412"></polygon>
                     <polygon id="Fill-13" points="46.4544706 29.0481176 44.7665294 30.7360588 39.9938824 25.9634118 48.1971176 17.7601765 52.9653529 22.5284118 51.2782941 24.2154706 48.3144706 21.2525294 46.7553529 22.8107647 49.443 25.4992941 47.8494706 27.0919412 45.1618235 24.4042941 43.4862353 26.0807647"></polygon>
@@ -30,7 +28,7 @@
             </g>
         </g>
     </svg>
-</select>
+
     <nav class="menyNav" id="test">
         <!--https://css-tricks.com/three-line-menu-navicon/-->
         <button class="menuBtn" onclick="menuBtn()">MENY  &#9776</button>
@@ -47,25 +45,790 @@
     </nav>     
     </header>
 
-    <main>
-            <!--Video henta fra   https://www.oslomet.no/studier/tkd/matematisk-modellering-datavitenskap-->
-           <iframe src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo_id=95216483
-           " frameborder="0"></iframe>
-        
-            <article class="main-content">
-                <h1>
-                    Matematisk modellering og datavitenskap – ingeniør
-                </h1>
-                <h2>
-                    Bachelorprogram
-                </h2>
-            </article>
-
-    </main>
+<main>
     
+    <article class="innledningBoks">
+        
+        <section class="innledning">
+    
+            <h1>Matematisk modellering og datavitenskap - ingeniør</h1>
+    
+        <p>Få innsikt i matematiske modeller og datadrevne metoder 
+            som kan løse mange praktiske og samfunnsnyttige oppgaver.
+        </p>
+        </section>
+
+        <aside class="pictureInnledning"> <img src="otterTest.jfif" alt="kjkj"></aside>
+
+        <article class="innledningInfo">
+            <!--https://codepen.io/AllThingsSmitty/pen/MyqmdM-->
+            <table class="respTab">
+                <thead>
+                    <tr class="studieInfo"> 
+                        <th scope="col">Studiested</th>
+                        <th scope="col">Varighet</th>
+                        <th scope="col">Omfang</th>
+                        <th scope="col">Studiepoeng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Studiested">Pilestredet i Oslo</td>
+                        <td data-label="Varighet">3 år</td>
+                        <td data-label="Omfang">Heltid</td>
+                        <td data-label="Studiepoeng">180</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr> 
+                        <th scope="col">Studiestart</th>
+                        <th scope="col">Undervisningsspråk</th>
+                        <th scope="col">Studieplasser</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Studiestart">August</td>
+                        <td data-label="Undervisningsspråk">Norsk | Engelsk</td>
+                        <td data-label="Studieplasser">40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </article>
+    <div class="content-wrapper">
+        <nav class="sidebar">
+            <!-- Endra ga de href navn og oversatte til norsk?-->
+            <ul class="nav-links">
+                <li><a href="#opptak">Opptakskrav og poeng</a></li>
+                <li><a href="#søknad">Slik søker du</a></li>
+                <li><a href="#lærer">Hva lærer du?</a></li>
+                <li><a href="#oppbyging">Studiets oppbygning</a></li>
+                <li><a href="#undervisning">Hvordan foregår undervisningen?</a></li>
+                <li><a href="#kost">Hva koster det?</a></li>
+                <li><a href="#jobb">Hva kan du jobbe som?</a></li>
+                <li><a href="#utveksling">Utveksling</a></li>
+                <li><a href="#videreStudier">Videre studiemuligheter ved OsloMet</a></li>
+            </ul>
+        </nav>
+        
+<!--skrev inn all infon og lagde lists og tabel og sånn-->
+        <article class="main-content">
+            <div class="accordion">
+                <details>
+                    <summary id="opptak">Opptakskrav og poeng</summary>
+                    <div class="accordion-content">
+                        <p>For å søke på dette programmet må du ha</p>
+                        <ul>
+                            <li><a href="#">generell studiekompetanse (samordnaopptak.no)</a> eller <a href="#">oppfylle kravene til realkompetanse</a></li>
+                            <li>matematikk R1 og R2</li>
+                            <li>fysikk 1</li>
+                        </ul>
+                        <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
+                        <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har <a href="#">bestått ettårig forkurs for ingeniørutdanning</a>.</p>
+                    </div>
+                </details>
+                <div class="accordion">
+                    <details>
+                        <summary id="opptak">Video om studie</summary>
+                        <div class="iframe-wrapper">
+                            <iframe src="https://film.oslomet.no/v.ihtml/player.html?source=embed&photo_id=95216483
+                            " frameborder="0"></iframe>
+                         </div>
+                    </details>
+            
+                <details>
+                    <summary id="søknad">Slik søker du</summary>
+                    <div class="accordion-content">
+                        <p>Du søker på Samordna opptak med studiekode 215 503.</p>
+                        <ul>
+                            <li>15. april: ordinær søknadsfrist</li>
+                            <li>1. mars: frist for enkelte søkere</li>
+                        </ul>
+                        <p><a href="#">Mer om å søke på bachelor.</a></p>
+                    </div>
+                </details>
+            <!--Ga navn på denne fordi jeg skulle prøve å få indre summary til å få mindre skrift men funka ikke-->
+                <details class="indreSummary">
+                    <summary id="lærer">Hva lærer du?</summary>
+                    <div class="accordion-content">
+                        <p>Bachelor i matematisk modellering og datavitenskap kobler sammen matematikk, informatikk, fysikk og statistikk.</p>
+                        <p>Du får innsikt i matematiske modeller som brukes i praktisk problemløsning blant annet i medisinsk kjemi, biologiske prosesser og ulike samfunnssystemer.</p>
+                        <p>Det første studieåret har du emner i blant annet matematiskk, programmering, fysikk og kjemi for å få en felles forståelse av tematikken.</p>
+                        <p>Det siste semesteret skriver du en bacheloroppgave tett knyttet til problemstillinger i arbeidslivet.</p>
+                        <p>Første året velger du hvilken av disse spesialiseringene du vil ta.</p>
+                        <details>
+                            <summary>Statistiske og datadrevne metoder</summary>
+                            <p>Du lærer om hvordan du  kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre beregninger, for eksempel av fremtidige strømpriser.</p>
+                            <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+                        </details>
+                        <details>
+                            <summary>Vitenskapelige beregninger</summary>
+                            <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske problemer med numeriske metoder.</p>
+                            <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.</p>
+                        </details>
+                        <details>
+                            <summary>Matematikk og fysikk</summary>
+                            <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.</p>
+                            <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer, representasjonsteori og kategoriteori.</p>
+                            <p>I fystikk lærer du om termodynamikk og statistisk fysikk.</p>
+                        </details>
+                        <ul>
+                            <li><a href="#">Se programplan på student.oslomet.no</a></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details>
+                    <summary id="oppbyging">Studiets oppbygging</summary>
+                    <section class="accordion-content">
+                        
+                            <div class="tabs-wrapper">
+                                <!-- Radioknapper for tabs -->                                    
+                                 <input type="radio" id="tab1" name="tab-group" checked>
+                                 <input type="radio" id="tab2" name="tab-group">
+                                 <input type="radio" id="tab3" name="tab-group">
+                                 <div class="button-container">
+                                    <label for="tab1" class="tab-label">1. studieår</label>
+                                    <label for="tab2" class="tab-label">2. studieår</label>
+                                    <label for="tab3" class="tab-label">3. studieår</label>
+                                </div>
+                                <!-- Innhold for tabs -->
+                                <div class="tab-content" id="content1">
+                                    <div class="studie-overskrift">
+                                        <img src="optional-icon.svg" id="studie-ikoner">
+                                        <p>Valgfritt emne</p>
+                                        <img src="multi-semester-icon.svg" id="studie-ikoner">
+                                        <p>Løper over flere semestere</p>
+                                    </div>
+                                    <div class="emnegrupper">
+                                        <p><span class="bold">Emnegrupper:</span> Matematikk fysikk (MF), Statistiske og datadrevne metoder (SDM), Vitenskapelige beregninger (VB)</p>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>1. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Diskret matematikk</div>
+                                            <div class="course-code">DAPE1300</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Programmering</div>
+                                            <div class="course-code">DAPE1400</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Teknologi og samfunn for programmerere</div>
+                                            <div class="course-code">DATA1100</div>
+                                            <div class="credits">5 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Innføring i modeller og beregninger</div>
+                                            <div class="course-code">MAMO1100</div>
+                                            <div class="credits">5 stp.</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>2. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Matematikk 1000</div>
+                                            <div class="course-code">DAFE1000</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Fysikk og kjemi</div>
+                                            <div class="course-code">DAPE2101</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Databaser</div>
+                                            <div class="course-code">DATA1500</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="content2">
+                                    <div class="studie-overskrift">
+                                        <img src="optional-icon.svg" id="studie-ikoner">
+                                        <p>Valgfritt emne</p>
+                                        <img src="multi-semester-icon.svg" id="studie-ikoner">
+                                        <p>Løper over flere semestere</p>
+                                    </div>
+                                    <div class="emnegrupper">
+                                        <p><span class="bold">Emnegrupper:</span> Matematikk fysikk (MF), Statistiske og datadrevne metoder (SDM), Vitenskapelige beregninger (VB)</p>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>3. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Matematikk 2000 med statistikk</div>
+                                            <div class="course-code">DAPE2000</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Moderne fysikk</div>
+                                            <div class="course-code">MAMO2100</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Lineær algebra og introduksjon til gruppeteori</div>
+                                            <div class="course-code">MAMO2300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Algebra og datastrukturer</div>
+                                            <div class="course-code">DATS2300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Algoritmer og datastrukturer</div>
+                                            <div class="course-code">DATSS2300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>4. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Matematikk 4000</div>
+                                            <div class="course-code">DAVE3705</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Termodynamikk og statistisk fysikk</div>
+                                            <div class="course-code">MAMO2400</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Symmetrier og algebraiske strukturer</div>
+                                            <div class="course-code">MAMO2500</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Statistisk analyse</div>
+                                            <div class="course-code">MAMO3100</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Visualisering</div>
+                                            <div class="course-code">ADSE3200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Avansert modellering og beregninger</div>
+                                            <div class="course-code">MAMO2200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Ressurseffektive programmer</div>
+                                            <div class="course-code">DAVE3606</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Avansert modellering og beregninger</div>
+                                            <div class="course-code">MAMO3100</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content" id="content3">
+                                    <div class="studie-overskrift">
+                                        <img src="optional-icon.svg" id="studie-ikoner">
+                                        <p>Valgfritt emne</p>
+                                        <img src="multi-semester-icon.svg" id="studie-ikoner">
+                                        <p>Løper over flere semestere</p>
+                                    </div>
+                                    <div class="emnegrupper">
+                                        <p><span class="bold">Emnegrupper:</span> Matematikk fysikk (MF), Statistiske og datadrevne metoder (SDM), Vitenskapelige beregninger (VB)</p>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>5. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Matematikk 3000</div>
+                                            <div class="course-code">DAVE3700</div>
+                                            <div class="credits">10 stp.</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Reell analyse</div>
+                                            <div class="course-code">MAMO3300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Introduksjon til IT-forskning</div>
+                                            <div class="course-code">DATA3730</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Introduction to Data Science with Scripting</div>
+                                            <div class="course-code">DATA3800</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datasikkerhet</div>
+                                            <div class="course-code">ITPE3100</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Simulering og visualisering</div>
+                                            <div class="course-code">MAMO3200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Introduksjon til Kunstig Intelligens</div>
+                                            <div class="course-code">DAVE3625</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Introduksjon til IT-forskning</div>
+                                            <div class="course-code">DATA3730</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Anvendt kunstig intelligens og data science prosjekt</div>
+                                            <div class="course-code">DATA3750</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datasikkerhet</div>
+                                            <div class="course-code">ITPE3100</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Simulering og visualisering</div>
+                                            <div class="course-code">MAMO3200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Simulering og visualisering</div>
+                                            <div class="course-code">MAMO3200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Introduksjon til IT-forskning</div>
+                                            <div class="course-code">DATA3730</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datasikkerhet</div>
+                                            <div class="course-code">ITPE3100</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Lineær algebra og introduksjon til gruppeteori</div>
+                                            <div class="course-code">MAMO2300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Reell analyse</div>
+                                            <div class="course-code">MAMO3300</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="semester">
+                                        <h2>6. Semester</h2>
+                                    <div class="course-container">
+                                        <div class="course-card">
+                                            <div class="course-title">Bacheloroppgave</div>
+                                            <div class="course-code">DATA3900</div>
+                                            <div class="credits">20 stp.</div>
+                                        </div>
+                                            <div class="course-card">
+                                            <div class="course-title">Testing av programvare</div>
+                                            <div class="course-code">ADTS2310</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datanettverk og skytjenester</div>
+                                            <div class="course-code">DATA2410</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Ressurseffektive programmer</div>
+                                            <div class="course-code">DAVE3606</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Avansert modellering og beregninger</div>
+                                            <div class="course-code">MAMO2200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-matte">MF</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Testing av programvare</div>
+                                            <div class="course-code">ADTS2310</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datanettverk og skytjenester</div>
+                                            <div class="course-code">DATA2410</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Ressurseffektive programmer</div>
+                                            <div class="course-code">DAVE3606</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-statistikk">SDM</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Visualisering</div>
+                                            <div class="course-code">ADSE3200</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+
+                                        </div>
+                                                <div class="course-card">
+                                                    <div class="course-title">Testing av programvare</div>
+                                                    <div class="course-code">ADTS2310</div>
+                                                    <div class="credits">10 stp.</div>
+                                                    <div class="emne-vit">VB</div>
+                                                    <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Datanettverk og skytjenester</div>
+                                            <div class="course-code">DATA2410</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                        <div class="course-card">
+                                            <div class="course-title">Symmetrier og algebraiske strukturer</div>
+                                            <div class="course-code">MAMO2500</div>
+                                            <div class="credits">10 stp.</div>
+                                            <div class="emne-vit">VB</div>
+                                            <div class="valgfag">
+                                                <img src="optional-icon.svg" id="studie-ikoner">
+                                                <p>Valgfritt emne</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                    
+                    
+                </details>
+
+                <details>
+                    <summary id="undervisning">Hvordan foregår undervisningen?</summary>
+                    <div class="accordion-content">
+                        <p>Undervisningen er en kombinasjon av</p>
+                        <ul>
+                            <li>prosjektarbeid</li>
+                            <li>workshop</li>
+                            <li>presentasjoner</li>
+                            <li>veiledninger</li>
+                            <li>diskusjoner og refleksjoner</li>
+                            <li>forelesninger</li>
+                            <li>selvstudier</li>
+                            <li>gruppearbeid</li>
+                            <li>arbeidslivsrelevant bacheloroppgave</li>
+                        </ul>
+                        <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele stemesteret.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary id="kost">Hva koster det?</summary>
+                    <div class="accordion-content">
+                        <p><a href="#">Du betaler en semesteravgift hvert semester (student.oslomet.no).</a></p>
+                        <p><a href="#">Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (student.oslomet.no).</a> Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary id="jobb">Hva kan du jobbe som?</summary>
+                    <div class="accordion-content">
+                        <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
+                        <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt kompetanse i arbeidslivet etter bachelorstudiet.</p>
+                        <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.</p>
+                        <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary id="utveksling">Utveksling</summary>
+                    <div class="accordion-content">
+                        <p>Du kan dra på utveksling i femte semester.</p>
+                    </div>
+                </details>
+
+                <details>
+                    <summary id="videreStudier">Videre studiemuligheter ved OsloMet</summary>
+                    <div class="Anvendt"></div>
+                        
+                        <p class="Anvendtdata"><a href="#">Anvendt data- og informasjonsteknologi (ACIT)</a>    
+                        </p>
+                    <p>Masterprogram | 2 år | Pilestredet i Oslo | Heltid </p>
+                        </a>
+                    </div>
+                </details>
+
+            </div>
+            
+        </article>
+    </div>
+</div>
+    
+
+
+<section class="fagligleder">
+    <img src="fagligleder.jpeg" alt="ledern">
+    <div class="fagligleder-text">
+        <h3>Kristoffer Herland Hellton</h3>
+        <p>Førsteamanuensis</p>
+        <p class="kontaktinfo">+47 672 37 240 | kristoffer.hellton@oslomet.no</p>
+    </div>
+</section>
+
+
+<article class = "Interessertestudier">
+    <section class="interesserte-studier">
+        <h2>Du er kanskje også interessert i disse?</h2>
+        <div class="studie-list">
+            <div class="studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"><a href="#">Anvendt datateknologi</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>            
+            </div>
+
+            <div class="studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"></p><a href="#">Bioteknologi- og kjemiingeniør</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+
+            <div class="studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"><a href="#">Byggingeniør</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+
+             <div class="studie"> 
+                <div class="studie-info">
+                    <p class="studie-oversikt"></p><a href="#">Dataingeniør</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+             </div>
+
+            <div class = "studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"></p><a href="#">Elektronikkingeniør</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+
+            <div class = "studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"></p><a href="#">Informasjonsteknologi</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+
+            <div class = "studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"><a href="#">Maskiningeniør</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+
+            <div class = "studie">
+                <div class="studie-info">
+                    <p class="studie-oversikt"><a href="#">Tre-terminsordning til ingeniørutdanning</a></p>
+                    <p>Bachelorprogram | 3 år | Pilestredet i Oslo | Heltid</p>
+                </div>
+            </div>
+            
+                
+        </div>
+    </section>
+
+  
+</article>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h1 class="university-name">OSLO METROPOLITAN UNIVERSITY</h1>
+        <p class="university-subtitle">STORBYUNIVERSITETET</p>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+  
+      <nav class="footer-section">
+        <ul class="footer-links">
+          <li><a href="#">Oslomet.no</a></li>
+          <li><a href="#">University Library</a></li>
+          <li><a href="#">What's Happening?</a></li>
+          <li><a href="#">Latest News</a></li>
+          <li><a href="#">Give Feedback</a></li>
+          <li><a href="#">About Cookies</a></li>
+          <li><a href="#">Accessibility Statement (uustatus.no)</a></li>
+          <li><a href="#">Student Job Openings</a></li>
+        </ul>
+      </nav>
+  
+      <div class="footer-section">
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M12,2C6.477,2,2,6.477,2,12c0,5.013,3.693,9.153,8.505,9.876V14.65H8.031v-2.629h2.474v-1.749 c0-2.896,1.411-4.167,3.818-4.167c1.153,0,1.762,0.085,2.051,0.124v2.294h-1.642c-1.022,0-1.379,0.969-1.379,2.061v1.437h2.995 l-0.406,2.629h-2.588v7.247C18.235,21.236,22,17.062,22,12C22,6.477,17.523,2,12,2z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+              <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 <script>
-     function menuBtn(){
+    function menuBtn(){
         var popup = document.getElementById("popUpMenu"); // Select the popup element
     if (popup.style.display === "none" || popup.style.display === "") {
         popup.style.display = "block"; // Show the popup if hidden
@@ -74,6 +837,4 @@
     }
     }
 </script>
-
-
 </html>

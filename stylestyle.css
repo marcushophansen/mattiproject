@@ -1,12 +1,13 @@
 body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgray;
+    background-color: rgb(255, 255, 255);
+    
 }
 
 /*Meny og logo*/
 header{
-    background-color: #FFDC00;
+    background-color: #0c1a57;
     width: 100%;
     height: fit-content;
     
@@ -21,7 +22,8 @@ header{
     height: 50%;
     display: flex;
     justify-content: flex-start;
-}
+    }
+
 
 li{
     /*Må endres på, må bytte de som bruker denne til en egen class.*/
@@ -29,7 +31,7 @@ li{
 }
 a ,.innholdA{
     /*Linkene i hoved meny og innholdmeny*/
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-decoration: none;
 }
@@ -44,77 +46,707 @@ a ,.innholdA{
     top: 2%;
     right: 10%;
     border: none;
-    background-color: #FFDC00;
+    background-color: #0c1a57;
     border: none;
     font-size: 1.5em;
     font-weight: bold;
+    color: white;
 }
 
-/*Video-box*/
+/*Innledning*/
+.innledningBoks{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #d6dae6e4;
+}
 
-iframe{
+
+
+.innledning{
+    width:48%;
+    height: fit-content;
+    margin-right: 10px;
+    flex:1;
+    min-width: 300px;
     
-    width: 1000px;
-    height: 567px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+}
+h1 {
+    font-size: 2em;
+    padding-left: 5%;
+}
+
+h3{
+    padding-left: 5%;
+}
+
+p {
+    font-size: 1.2em;
+    padding-left: 5%;
+}
+
+img{
+width: auto;
+height: 80%;
+min-width: 300px;
+padding-top: 10%;
+padding-bottom: 10%;;
+
+}
+
+
+@media (max-width: 609px) {
+    .innledning{
+        width:100%;
+        height: fit-content;
+        margin-right: 10px;
+    }
+    
+}
+
+
+
+.tabellBoks{
+    width: 100%;
+    height: 200px;
+    background-color:lightgray;
+}
+
+/*Tabell under bilde*/
+.respTab {
+    width: 100%;
+    background-color: #1b2e72e4;
+    padding-bottom: 35px;
+    table-layout: fixed;
+
+}
+
+.respTab th, td {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+}
+
+.respTab th {
+    padding-bottom: 10px;
+    padding-top: 35px;
+    font-size: large;
+}
+
+@media screen and (max-width:720px) {
+    .menuBtn{
+        top: 1%;
+    }
+
+    .respTab {
+        border: 0;
+        padding: 5%;
+        border-top: 1px solid black;
+    }
+
+    .respTab thead {
+       display: none;
+        
+    }
+
+    .respTab tr{
+        display: block;
+        border-bottom: 1px solid black;
+    }
+
+    .respTab td {
+        display: block;
+        text-align: right;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-bottom: 1px solid black;
+        
+    }
+
+    .respTab td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+    
+}
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    background-color: #f9fafb;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: white;
+    /*Fjærna paddingen fordi den stakk utenfor*/
+    padding: 0;
+    border-right: 1px solid #e5e7eb;
+}
+
+.highlight-box {
+    background-color: #eff6ff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.highlight-box h2 {
+    color: #374151;
+    font-weight: 500;
+}
+
+.nav-links {
+    list-style: none;
+    position: sticky; /* Gjør at navigasjonen følger siden */
+    top: 5%;
+}
+
+.nav-links li {
+    margin: 12px 0;
+    font-size: 0.8em;
+}
+
+.nav-links a {
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #111827;
+}
+
+.main-content {
+    flex: 1;
+    padding: 32px;
+    max-width: 896px;
+}
+
+.subject-label {
+    text-transform: uppercase;
+    color: #6b7280;
+    font-size: 0.8px;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 8px 0 24px 0;
+    color: #111827;
+}
+
+.intro-text {
+    font-size: 1.1250px;
+    color: #374151;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 48px 0 24px 0;
+    color: #111827;
+}
+
+.description {
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+}
+
+/* main teksten */
+details {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: none;
+}
+
+details p {
+    font-size: medium;
+}
+
+details li {
+    font-size: medium;
+}
+
+summary {
+    list-style: none; /*fjerner default pil*/
+    color: #000;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.1250em;
+    font-weight: bold;
+}
+
+details[open] summary::before {/*Pil for åpen tilstand*/
+    content: "×";
+    margin-right: 10px;
+    background-color: #4d6fae;
+} 
+
+details summary::before { /*Pil for lukket tilstand*/
+    content: "+";
+    margin-right: 10px;
+    /*Gul bakgrunn for punktsymbol i åpen og lukket tilstand*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #4d6fae;
+}
+
+.accordion-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+
+/* Innhold for tabsene */
+.content {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-top: none; /* Ingen kant mellom tabs og innhold */
+}
+
+/* Skjul innholdet som ikke er valgt */
+.tab-content {
+    display: none;
+}
+
+.tab-content h2 {
     margin-top: 5%;
+    font-size: small;
+    text-align: left;
+    min-width: none;
 }
 
-.main-content{
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
+/* Vis innholdet for den aktive tabben */
+input#tab1:checked ~ .content .tab-content[data-tab="tab1"],
+input#tab2:checked ~ .content .tab-content[data-tab="tab2"],
+input#tab3:checked ~ .content .tab-content[data-tab="tab3"] {
+    display: block;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/*Iframe video*/
+iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.iframe-wrapper{
+    width: 100%; 
+    /*Gir iframe riktig høyde-bredde forhold*/
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
 }
 
 
+.year-container {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
 
+  .semester {
+    background-color: #364785e4;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
 
-@media screen and (max-width:630px) {
-    .menuBtn{
-        top: 2%;
-        right: 10%;
-    }
+  .semester h2 {
+    font-size: 1.2rem;
+    color:white;
+    margin-top: 5px;
+  }
 
-    iframe{
-        width: 350px;
-        height: 200px;
-    }
-    .main-content{
-        margin-left: auto;
-        margin-right: auto;
-        width: 350px;
-    }
-    h1{
-        font-size: 1.6em;
-    }
-    h2{
-        font-size: 1em;
-    }
+  .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .course-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 100px;
+  }
+
+  .course-title {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .course-code {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 10px;
+  }
+
+  .credits {
+    font-size: 0.9rem;
+    color: #0c1a57;
+    padding: 3px 6px;
+    background-color: darkgrey;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+    .emne-matte, .emne-statistikk, .emne-vit {
+    margin-top: 10px;
+    padding: 3px 6px;
+    border-radius: 4px; 
+    display: inline-block;
+    background-color: #374151;
+    color: white;
+  }
+
+  .valgfag {
+    display: flex;
+    align-items: center;
+  }
+
+  .valgfag p {
+    font-size: 0.8em;
+  }
+
+  .emnegrupper {
+    padding-bottom: 5px;
+  }
+
+  #studie-ikoner {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 0px;
+    display: inline-block;
+  }
+  .studie-overskrift {
+    display: flex;
+    align-items: center;
+}
+.studie-overskrift p {
+   padding-left: 1%;
+   padding-right: 5%;
+}
+
+/* Grunnleggende layout for wrapper */
+.tabs-wrapper {
+    max-width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #0c1a57;
+    padding: 3%;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+}
+
+.tab-group {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid yellow;
+}
+.button-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Stiler for tabbene */
+.tab-label {
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-label:hover {
+    background-color: darkgray;
+}
+
+input[type="radio"] {
+    display: none; /* Skjul radioknappene */
+}
+
+/* Aktiv tab */
+/* Kilde for nth-selector: https://www.w3schools.com/cssref/sel_nth-child.php */
+#tab1:checked ~ .button-container label:nth-child(1),
+#tab2:checked ~ .button-container label:nth-child(2),
+#tab3:checked ~ .button-container label:nth-child(3) {
+    background-color: white;
+    color: black;
+}
+
+/* Tab-innhold */
+.tab-content {
+    display: none; /* Skjul innhold som standard */
+    padding: 1rem;
+    padding-top: 0;
+    border-top: none; /* Fjern kanten mellom tab-innhold og tabbene */
+    background-color: white;
+    border-top-right-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+
+}
+
+/* Vis innholdet til den aktive tabben */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+.fagligleder {
+ display: flex;
+ justify-content: start;
+ height: 10em;
+ background-color: #b8bdc9d8;
+ margin-left: 298px;
+ margin-top: 40px;
+ max-width: 600px;
+ padding: 20px;
+ /*border: 1px solid red;*/
+}
+
+.fagligleder-text{
+    padding-top: 1rem; 
+    font-size: medium;
+    /*border: 1px solid blue;   */
+}
+
+.kontaktinfo {
+
+    font-size: 1rem;
+}
+
+.fagligleder img {
     
+    object-fit: contain;
+    height: 100%;
+    padding: 0;
+    min-width: 0px;
+   /* border: 1px solid green;   */
 }
 
 
-@media screen and (min-width: 630px) and (max-width: 834px) {
-    .menuBtn{
-        top: 2%;
-        right: 10%;
-    }
+.Interessertestudier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    max-width: 600px;
+    background-color: #d3d8e0;
+    margin-top: 200px;
+    margin-left: 298px;
+    margin-top: 40px;
+    max-width: 600px;
+    padding: 20px;
+}
 
-    iframe{
-        width: 650px;
-        height: 400px;
-    }
-    .main-content{
-        margin-left: auto;
-        margin-right: auto;
-        width: 650px;
-    }
-    h1{
-        font-size: 1.6em;
-    }
-    h2{
-        font-size: 1em;
-    }
+/* Container for hvert studie-element */
+.studie {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;  /* Øk litt for jevnt mellomrom */
+    border-bottom: 1px solid #000000;
+}
+
+.studie:last-child {
+    border-bottom: none;
+}
+
+/* Stil for overskriften med fast bredde */
+.studie-info .studie-overskrift {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 5px 0;  /* Sett margin på overskriften */
+    width: 100%;  /* Sikrer lik bredde */
+}
+
+/* Stil for vanlig tekst */
+.studie-info p {
+    font-size: 1rem;
+    margin: 0; /* Fjern unødvendige marginer */
+    width: 100%;  /* Sikrer lik bredde */
+    padding: 0;   /* Sikrer at tekst har lik startposisjon */
+}
+
+/* Sikrer konsekvent avstand og jevne marger */
+.studie-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Øk gap mellom overskrift og beskrivelse for tydeligere separasjon */
+    width: 100%;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #0c1a57;
+  color: #000;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.footer-links li {
+  font-size: 1em;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.university-name {
+  margin: 0;
+  font-size: 1.7em;
+  
+  color: white;
+}
+
+.university-subtitle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  fill: #ffffff;
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+  }
+
+  .footer {
+    padding: 20px 10px;
+    
+    
+  }
+
+  .section-title {
+    font-size: 1em;
+  }
+
+  .university-name {
+    font-size: 1.4em;
+    
+  }
+
+  .university-subtitle {
+    font-size: 1em;
+}
+
+.fagligleder, .Interessertestudier {
+    margin-left: 0px;
+    max-width: 100%;
+    justify-content: center;
+
+
+}
 }
