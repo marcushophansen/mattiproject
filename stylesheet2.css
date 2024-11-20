@@ -1,0 +1,789 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FBFBFE;
+}
+
+h1, h3, p {
+    padding-left: 5%;
+}
+
+h1 {
+    font-size: 2em; 
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+p, li {
+    font-size: 1.1em;
+}
+
+a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#white-text {
+    color: #FFFFFF;
+}
+
+/*Styling av header m/logo og nav*/
+header {
+    background-color: #0D2659;
+    width: 100%;
+    height: fit-content;
+}
+
+.oslomet-logo {
+   margin: 1%;
+}
+
+.menu-nav {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Liste u/bulletpoints, plassert til høyre under meny-knappen*/
+#dropdown-menu {
+    width: 100%;
+    padding-right: 5%;
+    display: none; /* Gjemmer listen*/
+    list-style: none;
+    font-size: 1.3em;
+    text-align: right;
+}
+
+#dropdown-menu a {
+    color: #FFFFFF;
+}
+
+/* Knappen for å åpne og lukke dropdown-menyen*/
+.menu-btn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: none;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #0D2659;
+    color: #FFFFFF;
+}
+
+/*Innledning m/overskrift og bilde*/
+.introduction-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.introduction{
+    width:48%;
+    height: fit-content;
+    margin-right: 10px;
+    flex:1;
+    min-width: 300px;
+}
+
+.introduction p {
+    font-size: 1.3em;
+    padding-left: 7%;
+    padding-right: 70px;
+    line-height: 1.5em;
+}
+
+.introduction-image {
+width: auto;
+height: 80%;
+min-width: 300px;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+@media (max-width: 609px) {
+    .introduction{
+        width:100%;
+        height: fit-content;
+        margin-right: 10px;
+    }
+
+}
+
+/*Tabell under bilde*/
+.introduction-table {
+    width: 100%;
+    background-color: #103070;
+    color: #FFFFFF  ;
+    padding-bottom: 35px;
+    table-layout: fixed;
+}
+
+.introduction-table th, td {
+    text-align: center;
+}
+
+.introduction-table th {
+    padding-bottom: 10px;
+    padding-top: 35px;
+}
+
+/*Sørger for at tabellen legger seg under hverandre på liten skjerm*/
+@media screen and (max-width:720px) {
+    .menuBtn{
+        top: 1%;
+    }
+
+    .introduction-table {
+        border: 0;
+        padding: 5%;
+        
+    }
+
+    tbody{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }  
+
+    .introduction-table tr, td, th{
+        display: block;
+        border-bottom: solid 1px;
+    }
+
+    .introduction-table tr{
+        width: 50%;
+        
+    }
+
+    .introduction-table td {
+        text-align: right;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .introduction-table th{
+        text-align: left;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    
+    
+    
+
+}
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 0; /*Fjærna paddingen fordi den stakk utenfor*/
+    background-color: #A6BFF2;
+}
+
+.content-nav {
+    list-style: none;
+    position: sticky; /* Gjør at navigasjonen følger siden */
+    top: 5%;
+}
+
+.content-nav li {
+    margin: 20px 0;
+}
+
+.content-nav a {
+    transition: color 0.2s;
+    font-size: 0.9rem;
+    color: #232323;
+}
+
+.content-nav a:hover {
+    color: #FBFBFE;
+    text-decoration: none;
+}
+
+.main-content {
+    flex: 1;
+    padding: 32px;
+    max-width: 896px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 24px;
+    }
+    
+}
+
+/* main teksten */
+details {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: none;
+}
+
+details ul {
+    padding-left: 10%;
+}
+
+/*Flytter programboksen i "Videre studiemuligheter ved OsloMet til høyre*/
+details .program-box {
+    padding-left: 5%;
+}
+
+summary {
+    list-style: none; /*fjerner default pil*/
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/*Liste-stil for åpen tilstand*/
+details[open] summary::before {
+    content: "×";
+    margin-right: 10px;
+    background-color: #799FEC;
+} 
+
+/*Liste-stil for lukekt tilstand*/
+details summary::before {
+    content: "+";
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #799FEC;
+}
+
+/*Iframe video*/
+iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.iframe-wrapper{
+    width: 100%; 
+    /*Gir iframe riktig høyde-bredde forhold*/
+    /*https://www.w3schools.com/howto/howto_css_responsive_iframes.asp*/
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+}
+
+/*Bakgrunnsfarge til semester boksene*/
+.semester-box {
+    background-color: #799FEC;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.semester-box h2 {
+    margin-top: 5px;
+}
+
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    flex: 1 1 100px;
+    list-style: none;
+}
+
+.course-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.course-code {
+    color: #AAA;
+    margin-bottom: 10px;
+}
+
+.course-credits, .emne-matte, .emne-statistikk, .emne-vit {
+    font-size: 0.9em;
+}
+
+.course-credits {
+    padding: 3px 6px;
+    background-color: #AAA;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.emne-matte, .emne-statistikk, .emne-vit {
+    padding: 3px 6px;
+    border-radius: 4px; 
+    display: inline-block;
+    background-color: #103070;
+    color: #FFFFFF;
+}
+
+.course-electives {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.tab-content-info {
+    padding-bottom: 5px;
+}
+
+.studie-ikoner {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    min-width: 0px;
+    display: inline-block;
+}
+
+.tab-content-icons {
+    display: flex;
+    align-items: center;
+}
+
+.tab-content-icons p {
+   padding-left: 1%;
+   padding-right: 5%;
+}
+
+/*Gjør "Emnegruppe" bold */
+.bold {
+    font-weight: bold;
+}
+
+/* Grunnleggende layout for wrapper */
+.tab-wrapper {
+    max-width: 100%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #103070;
+    padding: 3%;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/* Stiler for tabbene */
+.tab-label {
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    background-color: #808080;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-top-left-radius: 15px 15px;
+    border-top-right-radius: 15px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.tab-label:hover {
+    background-color: #AAA;
+}
+
+/* Skjuler radio-knappene */
+input[type="radio"] {
+    display: none;
+}
+
+/* Aktiv tab */
+/* Kilde for nth-selector: https://www.w3schools.com/cssref/sel_nth-child.php */
+#tab1:checked ~ .button-container label:nth-child(1),
+#tab2:checked ~ .button-container label:nth-child(2),
+#tab3:checked ~ .button-container label:nth-child(3) {
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+/* Tab-innhold */
+.tab-content {
+    display: none; /* Skjul innhold som standard */
+    padding: 1rem;
+    padding-top: 0;
+    border-top: none; /* Fjern kanten mellom tab-innhold og tabbene */
+    background-color: #FFFFFF;
+    border-top-right-radius: 15px 15px;
+    border-bottom-left-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+}
+
+/* Vis innholdet til den aktive tabben */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+    display: block;
+}
+
+.bottom-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 3%;
+}
+
+.bottom-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 0;
+    height: 50%;
+}
+
+.portrait-box, .bottom-left-boxes {
+    margin: 20px;
+}
+
+.portrait-box {
+ display: flex;
+ justify-content: start;
+ height: 10em;
+ background-color: #A6BFF2;
+ /*margin-left: 298px;
+ margin-top: 40px;
+ max-width: 600px;*/
+ padding: 20px;
+}
+
+.portrait-info{
+    padding-top: 1rem; 
+}
+
+.portrait-box img {
+    object-fit: contain;
+    height: 100%;
+    padding: 0;
+    min-width: 0px;
+}
+
+.bottom-left-boxes {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+    height: 10em;
+    background-color: #A6BFF2;
+    padding: 20px;
+}
+
+.bottom-left-boxes a {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.also-like-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    /*max-width: 600px;*/
+    background-color: #A6BFF2;
+    /*margin-top: 200px;
+    margin-left: 298px;
+    margin-top: 40px;
+    max-width: 600px;*/
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Container for hvert studie-element */
+.program-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 0;  /* Øk litt for jevnt mellomrom */
+    border-bottom: 1px solid #000000;
+}
+
+.program-box:last-child {
+    border-bottom: none;
+}
+
+/* Stil for overskriften med fast bredde */
+.program-info .tab-content-icons {
+    margin: 0 0 5px 0;  /* Sett margin på overskriften */
+    width: 100%;  /* Sikrer lik bredde */
+}
+
+/* Stil for vanlig tekst */
+.program-info p {
+    margin: 0; /* Fjern unødvendige marginer */
+    width: 100%;  /* Sikrer lik bredde */
+    padding: 0;   /* Sikrer at tekst har lik startposisjon */
+}
+
+/* Sikrer konsekvent avstand og jevne marger */
+.program-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Øk gap mellom overskrift og beskrivelse for tydeligere separasjon */
+    width: 100%;
+}
+
+
+/*Studenthistorier*/
+
+.studenthistorier-box{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    color: white;
+    
+}
+.studenthistory-h2{
+    width: 100%;
+}
+
+.studenthistorier{
+    width: 90%;
+    height: 45%;
+    background-color: darkslateblue;
+    padding: 5%;
+    
+}
+
+.studenthistorie-linker{
+    color: white;
+    
+}
+.studenthistory-img-box{
+    height: 100%;
+    width: 100%;
+    background-color: darkslateblue;
+    padding: 0; 
+}
+.img-history{
+    width: 100%;
+    height: 100%;
+}
+
+.more-stories {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    min-width: 100px;
+    margin-top: 5%;
+    background-color: #0c1a57;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4%;
+    
+    
+}
+.more-stories a{
+    border: none;
+}
+
+/* Footer styling */
+footer {
+  background-color: #0D2659;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+}
+
+.university-name {
+    margin: 0;
+}
+
+.university-subtitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    fill: #FFFFFF;
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+    .section-title {
+        font-size: 1em;
+    }
+
+    .university-name {
+        font-size: 1.4em;
+    }
+
+    .university-subtitle {
+        font-size: 1em;
+    }
+
+    .portrait-box, .also-like-box, .bottom-left-boxes {
+        margin-left: 0px;
+        max-width: 100%;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .bottom-main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/*Git hub*/
+
+.startingupgithub-box {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+  .startingup{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .ghchanges {
+      width: 50%;
+  }
+
+  .github-img {
+    width: 40%;
+
+  }
+
+  .startingupgithub-box h2 {
+    padding-left: 5%;
+    width: 100%;
+  }
+
+  .startingup p{
+    line-height: 2em;
+  }
+
+  .github-img-bottom{
+    width: 50%;
+  }
+  
+  .ghhistory {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+  
+
+  .benefitsofgithub-box {
+    display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  }
+ 
+.benefits{
+  width: 80%;
+  display: flex;
+  justify-content: end;
+}
+
+.benefits li {
+  line-height: 2em;
+}
